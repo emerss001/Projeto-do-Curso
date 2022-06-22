@@ -4,7 +4,7 @@ from django.template import loader
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.http import require_POST
-
+from .models import perfil
 
 
 from django.urls import reverse_lazy
