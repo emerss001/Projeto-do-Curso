@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+  table{
+    background-color: #58af9b;
+    border-radius: 5px;
+    font-size: 22px;
+  }
+
+  .btn{
+    background-color: #58af9b !important;
+    border: none;
+  }
+
+  .btn:hover{
+    background-color: #60d86c !important;
+  }
+</style>
+
+  
+
+
+  <div class="card">
+    <div class="card-body">
+      <h3>Preencha as informações necessárias</h3> <br><br>
+
+
+      <form>
+        <div class="form-group row">
+          <div class="form-group col-md-2">
+            <label for="date">Data</label>
+            <input type="date" class="form-control" id="inputEmail4">
+          </div>
+
+          
+          <div class="form-group col-md-4">
+            <label for="inputvalor">Valor</label>
+            <input type="text" class="form-control" id="inputPassword4" placeholder="70">
+          </div>
+
+
+          <div class="custom-file col-md-6">
+            <label class="custom-file-label" for="customFile">Logo</label>
+            <input type="file" class="form-control" id="customFile">
+          </div>
+
+        </div>
+
+        <br><br>
+
+
+          <table class="table table-striped">
+            <tbody>
+              <td>Dados de quem recebeu:</td>
+            </tbody>
+          </table>
+
+          <div class="form-group row">
+            <div class="form-group col-md-4">
+              <label for="inputNome">Nome</label>
+              <input type="text" class="form-control" id="inputAddress2">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="inputEndereco">Endereço</label>
+              <input type="text" class="form-control" id="inputAddress2">
+            </div>
+        </div>
+
+      <br><br>
+
+
+      <table class="table table-striped">
+        <tbody>
+          <td>Dados de quem pagou:</td>
+        </tbody>
+      </table>
+
+
+      
+      <div class="form-group row">
+        <div class="form-group col-md-4">
+          <label for="inputNome">Nome</label>
+          <input type="text" class="form-control" id="inputAddress2">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputEndereco">Endereço</label>
+          <input type="text" class="form-control" id="inputAddress2">
+        </div>
+    </div>
+
+<br>
+
+
+        <div class="form-group">
+          <div class="form-check">
+            <button type="submit" class="btn">Gerar</button>
+          </div>
+        </div>
+
+      </form>
+
+      
+{% endblock %}
+</body>
+</html>
