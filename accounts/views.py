@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.http import require_POST
 from .models import perfil
+from django.contrib.auth.hashers import make_password
 
 
 from django.urls import reverse_lazy
@@ -34,16 +35,13 @@ def cadastrar_usuario(request):
         nome_usuario = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
-
-        newUser = User.objects.create(username = nome_usuario, email = email, password = password)
-        newUser.save()
-
+        hashed_pwd = make_password(password)
+        newUser = User.objects.create(username = nome_usuario, email = email, password = hashed_pwd)
+        newUser.save()    
         return redirect('login')
 
     template = loader.get_template('registration/register.html')
     return HttpResponse(template.render({}, request))
-
- 
 
 
     
